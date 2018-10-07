@@ -7,55 +7,48 @@
         background-image: url('../assets/animations/frame1.svg');
     }
     20% {
-        background-size: 25%; 
         background-image: url('../assets/animations/frame2.svg');
     }
-    25% {
-       background-image: url('../assets/animations/frame2.svg');
-    }
-    30% {
+    22% {
+        background-size: 25%; 
         background-image: url('../assets/animations/frame3.svg');
     }
-    35% {
+    30% {
         background-image: url('../assets/animations/frame2.svg');
     }
-    40% {
+    32% {
         background-image: url('../assets/animations/frame4.svg');
     }
-    45% {
+    40% {
         background-image: url('../assets/animations/frame2.svg');
     }
-    50% {
+    42% {
         background-image: url('../assets/animations/frame5.svg');
     }
-    55% {
+    50% {
         background-image: url('../assets/animations/frame2.svg');
     }
-    60% {
+    52% {
         background-image: url('../assets/animations/frame6.svg');
     }
-    65% {
+    60% {
         background-image: url('../assets/animations/frame2.svg');
     }
-    70% {
+    62% {
         background-image: url('../assets/animations/frame7.svg');
     }
-    75% {
+    66% {
         background-size: 25%;
-        background-image: url('../assets/animations/frame2.svg');
-    }
-    80% {
         background-image: url('../assets/animations/frame8.svg');
     }
-    85% {
-        background-image: url('../assets/animations/frame9.svg');
-    } 
-    90% {
+    70% {
         background-image: url('../assets/animations/frame10.svg');
-    }
-    95% {
-        background-size: 30%;
+    }  
+    80% {
         background-image: url('../assets/animations/frame11.svg');
+    }   
+    90% {
+        background-size: 30%;
     }
     100% {
         background-size: 0%;
@@ -76,5 +69,5 @@ body {
 }
 
 .canvas.animate {
-    animation: intro 15s infinite;
+    animation: intro 8s infinite;
 }
