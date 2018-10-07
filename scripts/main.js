@@ -4,7 +4,7 @@ function preloadImages(array) {
     }
 
     var list = preloadImages.list;
-    
+
     for (var i = 0; i < array.length; i++) {
         var img = new Image();
         img.onload = function() {
@@ -31,7 +31,9 @@ $(document).ready(function() {
         'assets/animations/frame6.svg',
         'assets/animations/frame7.svg',
         'assets/animations/frame8.svg',
-        'assets/animations/frame9.svg'
+        'assets/animations/frame9.svg',
+        'assets/animations/frame10.svg',
+        'assets/animations/frame11.svg'
     ]);
 
     $('.canvas').addClass('animate');
