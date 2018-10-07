@@ -1,5 +1,57 @@
 body {
-    background-color: #0e0e0e;
-    color: chartreuse;
+    background-color: #f7f7f7;
+    color: #4d4d4d;
     font-family: monospace;
+    font-family: Orbitron, sans-serif;
+    font-size: 20px;
+    margin: 0;
+}
+
+body a {
+    color: inherit;
+    text-decoration: none; /* no underline */
+}
+
+.header {
+    padding: 10px;
+    height: 10vh;
+}
+
+.page-title .logo {
+    width: 60px;
+    vertical-align: top;
+}
+
+.page-title .logoMain {
+    display: initial;
+}
+
+.page-title .logoAlt {
+    display: none;
+}
+
+
+.page-title:hover .logoMain {
+    display: none;
+}
+
+.page-title:hover .logoAlt {
+    display: initial;
+}
+
+.page-nav a {
+    text-transform: uppercase;
+    transition: 0.5s;
+    font-size: 30px;
+}
+
+.page-nav a:hover {
+    font-size: 40px;
+    color: #0f52ba;
+}
+
+.canvas {
+    background: #4c4c4c;
+    width: 100vw;
+    height: 85vh;
 }

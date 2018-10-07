@@ -1,0 +1,70 @@
+@keyframes intro {
+    0% {
+        background-size: 0%;
+        background-image: url('../assets/animations/frame1.svg');
+    }
+    10% {
+        background-size: 25%; 
+        background-image: url('../assets/animations/frame1.svg');
+    }
+    15% {
+        background-image: url('../assets/animations/frame2.svg');
+    }
+    20% {
+       background-image: url('../assets/animations/frame2.svg');
+    }
+    25% {
+        background-image: url('../assets/animations/frame3.svg');
+    }
+    30% {
+        background-image: url('../assets/animations/frame2.svg');
+    }
+    35% {
+        background-image: url('../assets/animations/frame4.svg');
+    }
+    40% {
+        background-image: url('../assets/animations/frame2.svg');
+    }
+    45% {
+        background-image: url('../assets/animations/frame5.svg');
+    }
+    50% {
+        background-image: url('../assets/animations/frame2.svg');
+    }
+    55% {
+        background-image: url('../assets/animations/frame6.svg');
+    }
+    60% {
+        background-image: url('../assets/animations/frame2.svg');
+    }
+    65% {
+        background-image: url('../assets/animations/frame7.svg');
+    }
+    70% {
+        background-image: url('../assets/animations/frame2.svg');
+    }
+    75% {
+        background-image: url('../assets/animations/frame8.svg');
+    }
+    80% {
+        background-size: 25%;
+        background-image: url('../assets/animations/frame9.svg');
+    }
+    100% {
+        background-size: 0%;
+        background-image: url('../assets/animations/frame9.svg');
+    }
+}
+
+body {
+    margin: 0;
+}
+
+.canvas {
+    width: 100vw;
+    height: 100vh;
+    animation: intro 15s infinite;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+}
