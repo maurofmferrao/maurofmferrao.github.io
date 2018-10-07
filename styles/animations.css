@@ -63,8 +63,11 @@ body {
 .canvas {
     width: 100vw;
     height: 100vh;
-    animation: intro 15s infinite;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 25%;
+}
+
+.canvas.animate {
+    animation: intro 10s infinite;
 }
