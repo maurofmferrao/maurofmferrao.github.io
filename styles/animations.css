@@ -69,5 +69,8 @@ body {
 }
 
 .canvas.animate {
+    -webkit-animation: intro 8s infinite;
+    -moz-animation: intro 8s infinite;
+    -o-animation: intro 8s infinite;
     animation: intro 8s infinite;
 }
