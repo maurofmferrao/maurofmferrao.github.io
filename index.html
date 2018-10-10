@@ -6,12 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mauro Ferrão</title>
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    
+    <!-- STYLE -->
     <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <div class="canvas"></div>
 
-    <!-- Scripts -->
+    <!-- INTRO -->
+    <div class="intro-anim-container">
+        <div class="intro-logo"></div>
+    </div>
+
+    <!-- NAV -->
+    <div class="navbar">
+        <div class="logo"></div>
+    
+        <span class="nav-buttons">
+            <a id="nav-work" onclick="goTo('work')">Work</a>
+            <a id="nav-projects" onclick="goTo('projects')">Projects</a>
+            <a id="nav-about" onclick="goTo('about')">About</a>
+        </span>
+    </div>
+
+    <!-- WORK -->
+    <div class="page content-work">
+        <h1>WORK</h1>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="page content-projects">
+        <h1>PROJECTS</h1>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="page content-about">
+        <h1>ABOUT</h1>
+    </div>
+
+    <!-- SCRIPTS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="scripts/main.js" type="text/javascript"></script>
 </body>
