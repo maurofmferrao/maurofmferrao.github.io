@@ -37,7 +37,7 @@ window.goTo = function (pageToGo) {
                 
                 pageTransition(key, true);
                 pages[key].selected = true;
-            } else if(pages[key].selected) {
+            } else if(key != pageToGo && pages[key].selected) {
 
                 console.log('De: ' + key);
 
@@ -67,7 +67,7 @@ function start() {
     // TODO: Skip intro ( temporary )
     if(url.searchParams.get("skipIntro") === 'true') {
         $('.main-content').removeClass('hide');
-        
+
         goTo('index');
 
         $('.navbar').addClass('show');
