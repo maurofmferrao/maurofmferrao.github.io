@@ -1,0 +1,32 @@
+{
+  "name": "maurofmferrao.github.io",
+  "version": "1.0.0",
+  "description": "Mauro Ferrao Personal Site",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node_modules/.bin/webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maurofmferrao/maurofmferrao.github.io.git"
+  },
+  "author": "Mauro Ferrão",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maurofmferrao/maurofmferrao.github.io/issues"
+  },
+  "homepage": "https://github.com/maurofmferrao/maurofmferrao.github.io#readme",
+  "dependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "jquery": "^3.3.1",
+    "less-loader": "^4.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.20.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.1.2"
+  }
+}

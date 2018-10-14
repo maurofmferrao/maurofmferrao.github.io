@@ -1,0 +1,97 @@
+/* Basic structure */
+body {
+    background-color: #f7f7f7;
+    color: #4d4d4d;
+    font-family: monospace;
+    font-family: Orbitron, sans-serif;
+    font-size: 20px;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* No color or underline on links */
+body a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    background: white;
+    top: -100px;
+    transition: 1s;
+}
+
+.navbar.show {
+    top: 0;
+}
+
+.navbar ul  {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar ul li {
+    float: left;
+}
+
+.navbar ul li a {
+    display: block;
+    text-transform: uppercase;
+    margin-left: 10px;
+    transition: 500ms;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.navbar ul li a.active {
+    color: #0f52ba;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: #5387d6;
+}
+
+.navbar ul li a .logo {
+    width: 60px;
+    height: 60px;
+    background-size: 100% 100%;
+    background-image: url('../assets/images/animations/frame11.svg');
+}
+
+.navbar ul li a .logo:hover {
+    background-image: url('../assets/images/animations/frame10.svg');
+}
+
+/* Pages */
+.page {
+    background: #4c4c4c;
+    width: 100%;
+    position: absolute;
+    height: 80%;
+    color: white;
+    top: 76px;
+    left: -100vw;
+}
+
+.content-index {
+    background: #da6262;
+}
+
+.content-work {
+    background: #dad862;
+}
+
+.content-projects {
+    background: #62dab2;
+}
+
+.content-about {
+    background: #da62d4;
+}

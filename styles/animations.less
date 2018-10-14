@@ -1,0 +1,213 @@
+@anim-size: 5;
+@page-top: 20vh;
+
+.animateSupported(@animation) {
+    -webkit-animation: @animation;
+    -moz-animation: @animation;
+    -o-animation: @animation;
+    animation: @animation;
+    animation-fill-mode: forwards;
+}
+
+@keyframes logo-intro {
+    0% {
+        background-size: 0%;
+        background-image: url('../assets/images/animations/frame9.svg');
+    }
+    10% { 
+        background-image: url('../assets/images/animations/frame1.svg');
+    }
+    20% {
+        background-size: unit(@anim-size, ~"%");
+        background-image: url('../assets/images/animations/frame2.svg');
+    }
+    22% {
+        background-size: unit(@anim-size + 1, ~"%");
+        background-image: url('../assets/images/animations/frame3.svg');
+    }
+    30% {
+        background-size: unit(@anim-size + 1, ~"%");
+        background-image: url('../assets/images/animations/frame2.svg');
+    }
+    32% {
+        background-size: unit(@anim-size + 2, ~"%");
+        background-image: url('../assets/images/animations/frame4.svg');
+    }
+    40% {
+        background-size: unit(@anim-size + 2, ~"%");
+        background-image: url('../assets/images/animations/frame2.svg');
+    }
+    42% {
+        background-size: unit(@anim-size + 3, ~"%");
+        background-image: url('../assets/images/animations/frame5.svg');
+    }
+    50% {
+        background-size: unit(@anim-size + 3, ~"%");
+        background-image: url('../assets/images/animations/frame2.svg');
+    }
+    52% {
+        background-size: unit(@anim-size + 4, ~"%");
+        background-image: url('../assets/images/animations/frame6.svg');
+    }
+    60% {
+        background-size: unit(@anim-size + 4, ~"%");
+        background-image: url('../assets/images/animations/frame2.svg');
+    }
+    62% {
+        background-size: unit(@anim-size + 5, ~"%");
+        background-image: url('../assets/images/animations/frame7.svg');
+    }
+    66% {
+        background-size: unit(@anim-size + 5, ~"%");
+        background-image: url('../assets/images/animations/frame8.svg');
+    }
+    70% {
+        background-image: url('../assets/images/animations/frame10.svg');
+    }  
+    80% {
+        background-image: url('../assets/images/animations/frame11.svg');
+    }   
+    90% {
+        background-size: unit(@anim-size + 6, ~"%");
+    }
+    100% {
+        background-size: 0%;
+        background-image: url('../assets/images/animations/frame11.svg');
+    }
+}
+
+@keyframes logo-intro-mobile {
+    0% {
+        opacity: 0;
+        background-image: url('../assets/images/animations/frame1.svg');
+    }
+    10% { 
+        background-image: url('../assets/images/animations/frame1.svg');
+    }
+    20% {
+        opacity: 1;
+        background-image: url('../assets/images/animations/frame2.svg');
+    }
+    22% {
+        background-image: url('../assets/images/animations/frame3.svg');
+    }
+    30% {
+        background-image: url('../assets/images/animations/frame2.svg');
+    }
+    32% {
+        background-image: url('../assets/images/animations/frame4.svg');
+    }
+    40% {
+        background-image: url('../assets/images/animations/frame2.svg');
+    }
+    42% {
+        background-image: url('../assets/images/animations/frame5.svg');
+    }
+    50% {
+        background-image: url('../assets/images/animations/frame2.svg');
+    }
+    52% {
+        background-image: url('../assets/images/animations/frame6.svg');
+    }
+    60% {
+        background-image: url('../assets/images/animations/frame2.svg');
+    }
+    62% {
+        background-image: url('../assets/images/animations/frame7.svg');
+    }
+    66% {
+        background-image: url('../assets/images/animations/frame8.svg');
+    }
+    70% {
+        background-image: url('../assets/images/animations/frame10.svg');
+    }  
+    80% {
+        background-image: url('../assets/images/animations/frame11.svg');
+    }   
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        background-image: url('../assets/images/animations/frame11.svg');
+    }
+}
+
+@keyframes main-content-anim {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes show-anim {
+    0% {
+        left: 100vw;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes hide-anim {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -100vw;
+    }
+}
+
+.intro-anim-container {
+    display: none;
+    background: #f7f7f7;
+    transition: 400ms;
+    width: 60vw;
+    height: 80vh;
+    top: 10vh;
+    left: 20vw;
+}
+
+.intro-anim-container.show {
+    display: block;
+}
+
+.intro-logo {
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+    background-image: url('../assets/images/animations/frame11.svg');
+}
+
+.intro-logo.animate {
+    .animateSupported(logo-intro 8s);
+}
+
+.intro-logo.mobile.animate {
+    .animateSupported(logo-intro-mobile 8s);
+}
+
+.main-content.hide {
+    opacity: 0;
+}
+
+.main-content:not(.hide) {
+    .animateSupported(main-content-anim 2s);
+}
+
+.page.hide {
+    .animateSupported(hide-anim 1300ms);
+    z-index: 0;
+}
+
+.page:not(.hide) {
+    .animateSupported(show-anim 1s);
+    z-index: 1;
+}
