@@ -16,13 +16,22 @@
     </div>
 
     <!-- NAV -->
-    <nav class="navbar">
-        <ul class="nav-buttons">
-            <li><a id="nav-index" onclick="goTo('index')"><div class="logo"></div></a></li>
-            <li><a id="nav-work" onclick="goTo('work')">Work</a></li>
-            <li><a id="nav-projects" onclick="goTo('projects')">Projects</a></li>
-            <li><a id="nav-about" onclick="goTo('about')">About</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-md">
+
+        <a class="navbar-brand logo" href="#work" onclick="goTo('index')"></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarsExample04"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarcollapse">
+            <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
+                <li><a id="nav-work" href="#work" onclick="goTo('work')">Work</a></li>
+                <li><a id="nav-projects" href="#projects" onclick="goTo('projects')">Projects</a></li>
+                <li><a id="nav-about" href="#about" onclick="goTo('about')">About</a></li>
+            </ul>
+        </div>
     </nav>
 
     <div class="main-content hide">

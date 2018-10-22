@@ -57,6 +57,10 @@ function pageTransition(page, show) {
     }
 
     $('#nav-' + page).toggleClass('active', show);
+
+    if($('.navbar-toggler').attr('aria-expanded') === 'true') {
+        $('.navbar-toggler').click();
+    }
 }
 
 function start() {
