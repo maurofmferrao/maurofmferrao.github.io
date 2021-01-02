@@ -18,8 +18,7 @@ const pages = {
 const numAnimHide = 4;
 
 // MAIN
-$(document).ready(function() {
-
+$(function() {
     // Preload Images before start
     preloadAssets();
 
@@ -28,16 +27,16 @@ $(document).ready(function() {
 });
 
 // Functions
-window.goTo = function (pageToGo) {
-    for(const key in pages) {
-        if(pages.hasOwnProperty(key)) {
+window.goTo = function(pageToGo) {
+    for (const key in pages) {
+        if (pages.hasOwnProperty(key)) {
 
-            if(key === pageToGo && !pages[key].selected) {
+            if (key === pageToGo && !pages[key].selected) {
                 console.log('Select: ' + key);
-                
+
                 pageTransition(key, true);
                 pages[key].selected = true;
-            } else if(key != pageToGo && pages[key].selected) {
+            } else if (key != pageToGo && pages[key].selected) {
 
                 console.log('De: ' + key);
 
@@ -50,7 +49,7 @@ window.goTo = function (pageToGo) {
 
 function pageTransition(page, show) {
 
-    if(show) {
+    if (show) {
         $('.content-' + page).removeClass('hide');
     } else {
         $('.content-' + page).addClass('hide');
@@ -58,25 +57,27 @@ function pageTransition(page, show) {
 
     $('#nav-' + page).toggleClass('active', show);
 
-    if($('.navbar-toggler').attr('aria-expanded') === 'true') {
+    if ($('.navbar-toggler').attr('aria-expanded') === 'true') {
         $('.navbar-toggler').click();
     }
 }
 
 function start() {
-    
+
     // Get URL
     const url = new URL(window.location.href);
 
     // TODO: Skip intro ( temporary )
-    if(url.searchParams.get("skipIntro") === 'true') {
+    if (url.searchParams.get("showCV") === 'true') {
+        window.location.href = "./cv.html";
+    } else if (url.searchParams.get("skipIntro") === 'true') {
         $('.main-content').removeClass('hide');
 
         goTo('index');
 
         $('.navbar').addClass('show');
     } else {
-        if(isMobile.any() != null) {
+        if (isMobile.any() != null) {
             $('.intro-logo').addClass('mobile');
         }
 
@@ -91,7 +92,7 @@ function start() {
             $('.main-content').removeClass('hide');
 
             // TODO: Show menu ( temporary )
-            if(url.searchParams.get("showMenu") === 'true') {
+            if (url.searchParams.get("showMenu") === 'true') {
                 goTo('index');
 
                 $('.navbar').addClass('show');
@@ -114,17 +115,17 @@ function preloadAssets() {
 
 function preloadImages(imageArray) {
 
-    if(!preloadImages.list) {
+    if (!preloadImages.list) {
         preloadImages.list = [];
     }
 
     var list = preloadImages.list;
 
-    for(var i = 0;i < imageArray.length;i++) {
+    for (var i = 0; i < imageArray.length; i++) {
         var img = new Image();
         img.onload = function() {
             var index = list.indexOf(this);
-            if(index !== -1) {
+            if (index !== -1) {
                 // remove image from the array once it's loaded
                 // for memory consumption reasons
                 list.splice(index, 1);

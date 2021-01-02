@@ -1,5 +1,4 @@
 const path = require('path');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
@@ -7,9 +6,6 @@ module.exports = {
     devtool: 'source-map',
     mode: 'production',
     plugins: [
-        new UglifyJSPlugin({
-            sourceMap: true
-        }),
         new CleanWebpackPlugin(['dist']),
     ],
     output: {
